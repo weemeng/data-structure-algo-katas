@@ -1,4 +1,4 @@
-const Stack = require("./stack");
+const Stack = require("./OwnStack");
 
 describe("Stack", () => {
   it("should be able to push and pop item", () => {
@@ -15,6 +15,7 @@ describe("Stack", () => {
     expect(stack.pop()).toEqual("citrus");
     expect(stack.pop()).toEqual("banana");
     expect(stack.pop()).toEqual("apple");
+    expect(stack.pop()).toBeUndefined();
   });
 
   it("should be able to peek the top of the stack", () => {

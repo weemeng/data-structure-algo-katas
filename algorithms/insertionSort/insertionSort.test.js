@@ -1,4 +1,4 @@
-const { insertionSort } = require("./insertionSort");
+const insertionSort = require("./ownInsertionSort");
 
 describe("insertionSort", () => {
   it("should return empty array if array is empty", () => {

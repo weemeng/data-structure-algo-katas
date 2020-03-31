@@ -4,7 +4,7 @@ let listOfNumbers = [2, 3, 5, 6, 11];
 // List of Numbers: 2,3,5,6,11
 console.log("List of Numbers: " + listOfNumbers);
 // Accessing number at index 2: 5
-console.log("Accessing number at index 2: " + listOfNumbers[2]);
+console.log("Accessing numbm[,er at index 2: " + listOfNumbers[2]);
 // Length: 5
 console.log("Length: " + listOfNumbers.length);
 
