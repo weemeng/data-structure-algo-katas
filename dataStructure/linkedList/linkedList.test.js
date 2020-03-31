@@ -1,4 +1,5 @@
-const { Node, LinkedList } = require("./LinkedListSolution");
+const LinkedList = require("./OwnLinkedList");
+const Node = require("./OwnNode");
 
 describe("LinkedList", () => {
   describe("Node", () => {
@@ -83,7 +84,7 @@ describe("LinkedList", () => {
 
     it("push should append to the last item", () => {
       expect(() => list.push("a")).toThrow("not a node");
-      const node = new Node("a", undefined);
+      const node = new Node("a");
       list.push(node);
       expect(list.getLast()).toEqual(node);
       const nodeB = new Node("b");
@@ -182,6 +183,7 @@ describe("LinkedList", () => {
       expect(() => list.removeAt(1)).toThrow("index out of bound");
       expect(() => list.removeAt(-1)).toThrow("index out of bound");
       expect(list.removeAt(0)).toBe(nodeA);
+      expect(list.getSize()).toBe(0);
       expect(() => list.getAt(1)).toThrow("index out of bound");
       expect(list.getAt(0)).toEqual(null);
       list.insertAt(0, nodeA);
